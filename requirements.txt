@@ -6,4 +6,5 @@ langchain-huggingface==0.0.3
 langchain-groq==0.1.9
 unstructured==0.15.0
 unstructured[pdf]==0.15.0
+unstructured[docx]
 nltk==3.8.1

@@ -2,7 +2,7 @@ import os
 import json
 import sqlite3
 import streamlit as st
-from langchain_ollama import OllamaEmbeddings, ChatOllama
+# from langchain_ollama import OllamaEmbeddings, ChatOllama
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
@@ -38,8 +38,6 @@ class CandidateFilter(BaseModel):
 
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
-config_data = json.load(open(f"{working_dir}/config.json"))
-
 
 def setup_vectorstore():
     persist_directory = f"{working_dir}/vector_db_dir"

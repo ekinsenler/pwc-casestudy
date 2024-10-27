@@ -4,10 +4,10 @@ import json
 import datetime
 from langchain_community.document_loaders import UnstructuredFileLoader, DirectoryLoader
 from langchain_text_splitters import CharacterTextSplitter
-from langchain_ollama import OllamaEmbeddings
+# from langchain_ollama import OllamaEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain.prompts import PromptTemplate
-from langchain_ollama import ChatOllama
+# from langchain_ollama import ChatOllama
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from dotenv import load_dotenv
 import getpass
@@ -88,7 +88,7 @@ def extract_cv_info_using_llm(cv_text, llm):
     CV Text:
     John Doe is a software engineer with expertise in Python, Java, and machine learning. 
     He graduated from "İstanbul Üniversitesi" with a "Lisans Bilgisayar Mühendisliği" (Bachelor's in Computer Engineering) in 2017. 
-    John worked at "Göğüs Yazılım" as a "Kıdemli Yazılım Mühendisi" for 5 years and later joined "Facebook" as an "Engineering Manager," where he spent 3 years.
+    John worked at "Söğüş Yazılım" as a "Kıdemli Yazılım Mühendisi" for 5 years and later joined "Facebook" as an "Engineering Manager," where he spent 3 years.
     
     Expected JSON output:
     {{
@@ -104,7 +104,7 @@ def extract_cv_info_using_llm(cv_text, llm):
       "skills": ["Python", "Java", "Machine Learning"],
       "work_experience": [
         {{
-          "company": "Gogus Yazilim",
+          "company": "Sogus Yazilim",
           "role": "Senior Software Engineer",
           "years_of_experience": "5"
         }},
